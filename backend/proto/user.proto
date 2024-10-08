@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package user;
+
+service CreatUser {
+
+  rpc creatUser (CreatUserRequest) returns (CreatUserResponse) {}
+}
+
+message CreatUserRequest {
+  User user = 1;
+}
+
+
+message CreatUserResponse {
+  string message = 1;
+  User  user = 2;
+}
+
+message User {
+  string name = 1;
+  string email = 2;
+}
